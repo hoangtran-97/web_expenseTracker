@@ -74,7 +74,9 @@ module.exports = {
             {
                 "avoidEscape": true
             }
-        ]
+        ],
+        "no-unused-vars": [1, { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        "react/jsx-one-expression-per-line": "off"
     },
     "globals": {
         "fetch": false
