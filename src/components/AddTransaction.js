@@ -1,4 +1,4 @@
-import React, { ueState } from "react";
+import React, { useState } from "react";
 
 export const AddTransaction = () => {
     const [text, setText] = useState("");
@@ -10,13 +10,25 @@ export const AddTransaction = () => {
 
                 <label htmlFor="inputText">
                     Text
-                    <input type="text" placeholder="Enter text..." id="inputText" />
+                    <input
+                        type="text"
+                        placeholder="Enter text..."
+                        id="inputText"
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                    />
                 </label>
                 <label htmlFor="inputAmount">
                     Amount
                     <br />
                     (negative - expense, positive - income)
-                    <input type="text" placeholder="Enter amount..." id="inputAmount" />
+                    <input
+                        type="text"
+                        placeholder="Enter amount..."
+                        id="inputAmount"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                    />
                 </label>
                 <button type="button">Add transaction</button>
             </form>

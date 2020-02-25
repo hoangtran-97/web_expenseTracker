@@ -1,28 +1,18 @@
-
 module.exports = {
     root: true,
-    "extends": "airbnb",
-    "parser": "babel-eslint",
-    "env": {
-        "jest": true
+    extends: "airbnb",
+    parser: "babel-eslint",
+    env: {
+        jest: true
     },
-    "rules": {
+    rules: {
         "no-use-before-define": "off",
         "react/jsx-filename-extension": "off",
         "react/prop-types": "off",
         "comma-dangle": "off",
-        "indent": [
-            "error",
-            4
-        ],
-        "react/jsx-indent": [
-            "error",
-            4
-        ],
-        "react/jsx-indent-props": [
-            "error",
-            4
-        ],
+        indent: ["error", 4, { "SwitchCase": 1 }],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
         "import/prefer-default-export": "off",
         "react/prefer-stateless-function": "off",
         "react/jsx-no-bind": "off",
@@ -34,20 +24,20 @@ module.exports = {
         "max-len": [
             "error",
             {
-                "code": 165
+                code: 165
             }
         ],
         "react/destructuring-assignment": [
             1,
             "always",
             {
-                "ignoreClassFields": true
+                ignoreClassFields: true
             }
         ],
         "react/no-multi-comp": [
             1,
             {
-                "ignoreStateless": true
+                ignoreStateless: true
             }
         ],
         "no-shadow": "off",
@@ -62,23 +52,23 @@ module.exports = {
         "no-restricted-syntax": "off",
         "guard-for-in": "off",
         "react/no-unused-state": "off",
-        "radix": "off",
+        radix: "off",
         "react/no-array-index-key": "off",
         "react/sort-comp": "off",
         "no-undef": "off",
         "no-nested-ternary": "off",
         "no-unused-expressions": "off",
-        "quotes": [
+        quotes: [
             2,
             "double",
             {
-                "avoidEscape": true
+                avoidEscape: true
             }
         ],
-        "no-unused-vars": [1, { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+        "no-unused-vars": [1, { vars: "all", args: "after-used", ignoreRestSiblings: false }],
         "react/jsx-one-expression-per-line": "off"
     },
-    "globals": {
-        "fetch": false
+    globals: {
+        fetch: false
     }
 };
