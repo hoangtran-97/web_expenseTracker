@@ -66,7 +66,9 @@ module.exports = {
             }
         ],
         "no-unused-vars": [1, { vars: "all", args: "after-used", ignoreRestSiblings: false }],
-        "react/jsx-one-expression-per-line": "off"
+        "react/jsx-one-expression-per-line": "off",
+        "no-return-assign": "off"
+
     },
     globals: {
         fetch: false
