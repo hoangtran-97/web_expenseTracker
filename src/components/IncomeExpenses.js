@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import commonstyles from "../styles/commonstyles";
 
 export const IncomeExpenses = () => {
     const { transactions } = useContext(GlobalContext);
@@ -16,15 +17,23 @@ export const IncomeExpenses = () => {
 
     /* eslint-disable no-param-reassign */
     return (
-        <>
-            <div>
+        <div style={commonstyles.container}>
+            <div style={styles.item}>
                 <h4>Income</h4>
                 <p>{income}</p>
             </div>
-            <div>
+            <div style={styles.item}>
                 <h4>Expenses</h4>
                 <p>{expense}</p>
             </div>
-        </>
+        </div>
     );
+};
+const styles = {
+    item: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "Center",
+        alignItems: "center"
+    }
 };

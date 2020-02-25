@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Header = () => (
-    <h2>
+    <h2 style={{ textAlign: "center" }}>
         Expense Tracker
     </h2>
 );

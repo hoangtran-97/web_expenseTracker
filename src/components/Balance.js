@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import commonstyles from "../styles/commonstyles";
 
 export const Balance = () => {
     const { transactions } = useContext(GlobalContext);
@@ -10,9 +11,9 @@ export const Balance = () => {
         .toFixed(2);
     /* eslint-disable no-param-reassign */
     return (
-        <>
+        <div style={commonstyles.container}>
             <h4>Your Balance</h4>
             <h1>${total}</h1>
-        </>
+        </div>
     );
 };
