@@ -4,7 +4,7 @@ export default {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        width: "70vw",
+        width: "50vw",
         backgroundColor: "#424242",
         padding: "20px",
         borderRadius: "10px",

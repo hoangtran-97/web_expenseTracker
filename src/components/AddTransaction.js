@@ -20,10 +20,11 @@ export const AddTransaction = () => {
     return (
         <>
             <h3>Add new transaction</h3>
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} style={styles.form}>
 
-                <label htmlFor="inputText">
+                <label htmlFor="inputText" style={styles.label}>
                     Text
+                    <br />
                     <input
                         type="text"
                         placeholder="Enter text..."
@@ -32,10 +33,10 @@ export const AddTransaction = () => {
                         onChange={(e) => setText(e.target.value)}
                     />
                 </label>
-                <label htmlFor="inputAmount">
+                <label htmlFor="inputAmount" style={styles.label}>
                     Amount
+                    (- expense, + income)
                     <br />
-                    (negative - expense, positive - income)
                     <input
                         type="text"
                         placeholder="Enter amount..."
@@ -44,8 +45,29 @@ export const AddTransaction = () => {
                         onChange={(e) => setAmount(e.target.value)}
                     />
                 </label>
-                <button type="submit">Add transaction</button>
+                <button type="submit" style={styles.button}>Add transaction</button>
             </form>
         </>
     );
+};
+const styles = {
+    form: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        height: "150px",
+        backgroundColor: "#424242",
+        padding: "20px",
+        borderRadius: "10px",
+        marginBottom: "20px"
+    },
+    label: {
+        marginBottom: "10px"
+    },
+    button: {
+        backgroundColor: "white",
+        padding: "5px",
+        borderRadius: "10px"
+    }
 };
