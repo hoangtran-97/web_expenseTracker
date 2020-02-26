@@ -17,7 +17,7 @@ export const IncomeExpenses = () => {
 
     /* eslint-disable no-param-reassign */
     return (
-        <div style={commonstyles.container}>
+        <div style={commonstyles.container} className="incomeExpenses">
             <div style={styles.item}>
                 <h4>Income</h4>
                 <p>{income}</p>

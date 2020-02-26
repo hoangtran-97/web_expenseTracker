@@ -11,7 +11,7 @@ export const Balance = () => {
         .toFixed(2);
     /* eslint-disable no-param-reassign */
     return (
-        <div style={commonstyles.container}>
+        <div style={commonstyles.container} className="balance">
             <h4>Your Balance</h4>
             <h1>${total}</h1>
         </div>
