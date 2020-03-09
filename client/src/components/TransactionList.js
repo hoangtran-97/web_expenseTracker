@@ -6,7 +6,7 @@ export const TransactionList = () => {
     const { transactions } = useContext(GlobalContext);
 
     return (
-        <div style={styles.container} className="transactionList">
+        <div style={styles.container}>
             <h3>History</h3>
             <ul style={styles.list}>
                 {transactions.map((transaction) => (

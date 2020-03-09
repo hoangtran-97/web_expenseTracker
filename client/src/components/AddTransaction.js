@@ -18,7 +18,7 @@ export const AddTransaction = () => {
     };
 
     return (
-        <div className="addTransaction">
+        <>
             <h3>Add new transaction</h3>
             <form onSubmit={onSubmit} style={styles.form}>
 
@@ -47,7 +47,7 @@ export const AddTransaction = () => {
                 </label>
                 <button type="submit" style={styles.button}>Add transaction</button>
             </form>
-        </div>
+        </>
     );
 };
 const styles = {
